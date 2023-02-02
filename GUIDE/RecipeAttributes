@@ -1,0 +1,102 @@
+recipe Recipe Name
+Defines the name of the recipe, it will be used in .lua as it serves as recipe ID too.
+ 
+IngredientItemID,
+One of Ingredient will be used
+ 
+IngredientItemID=1,
+One of Ingredient's UseDelta will be used (If use delta of ingredient item is 0.1 the item will have 9 uses left)
+ 
+keep IngredientItemID,
+You will keep Ingredient Item upon recipe's execution.
+ 
+destroy IngredientItemID,
+Item will be removed upon recipe's execution.
+ 
+IngredientItemID/IngredientItemID2/IngredientItemID3
+Recipe will use IngredientItemID or IngredientItemID2 or IngredientItemID3 and so on...
+ 
+Result:ResultItemID,
+Defines the item that will be created upon recipe's execution.
+ 
+SkillRequired:Electricity=2,
+Defines the level of skill required to execute the recipe.
+ 
+Known Skills:
+Axe
+Strength
+Cooking
+Doctor
+Aiming
+Reloading
+Fishing
+PlantScavenging
+Farming
+Woodwork
+BladeMaintenance
+BluntMaintenance
+Nimble
+Sneak
+Lightfoot
+Blunt
+Sprinting
+Fitness
+Trapping
+BladeGuard
+BluntGuard
+Electricity
+ 
+NeedToBeLearn:true,
+If TRUE the recipe will need to be learned by the character in order to be used.
+ 
+CanBeDoneFromFloor:true,
+If TRUE the recipe can be executed if required items are on the floor.
+ 
+ 
+Category:Cooking,
+Defines the category used in Crafting UI (Build 32)
+ 
+Known Preset Categories:
+Carpentry
+Electrical
+Cooking
+Engineer
+Farming
+Survivalist
+Fishing
+Health
+Trapper
+ 
+Time:100.0,
+Defines time required to complete.
+ 
+OnGiveXP:LuaFunction_OnGiveXP,
+Upon execution, this will call a lua function that grant's the character XP points for it's execution.
+ 
+OnCreate:LuaFunction_OnCreate
+Calls a .lua function upon execution. The only way to have multiple results is to create a .lua function.
+ 
+For various OnCreate and OnGiveXP .lua functions used see the file below.
+ 
+C:\Steam\steamapps\common\ProjectZomboid\media\lua\server\recipecode.lua
+
+Again, see recipes.txt for examples on how to create a recipe, this just lists various things you can add\use in your recipes.
+ 
+REPAIRING - Below you will find stuff useful in repair scripts.
+ 
+Fixing scripts work almost identically to Recipe scripts.
+ 
+fixing Fix Name
+Same as recipe Recipe Name
+ 
+Require : ItemID,
+Defines the base item that will be fixed. In needs to have durability. Typically, it will be a weapon.
+ 
+Fixer : ItemID=2; SkillID=2,
+Defines the item used for fixing and skill required in order to sue it properly.
+ 
+Fixer : ItemID=4,
+Defines the item used for fixing, in this case, 4 of it or it's UseDelta will be used.
+ 
+Fixer : ItemID,
+Defines the item used for fixing, 1 will be used.

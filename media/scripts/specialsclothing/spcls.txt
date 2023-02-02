@@ -1,0 +1,44 @@
+module P4DSpcls
+{
+	item chargerSpcl
+	{
+		DisplayCategory = Clothing,
+        Type = Clothing,
+        DisplayName = Charger Skin,
+        ClothingItem = Charger Skin,
+        BodyLocation = FullSuit,
+		CanHaveHoles = false,
+		RunSpeedModifier = 1.0,
+		CombatSpeedModifier = 1.0,
+        Icon = down,
+        WorldStaticModel = down,
+	}
+
+	item boomerSpcl
+	{
+		DisplayCategory = Clothing,
+        Type = Clothing,
+        DisplayName = Boomer Skin,
+        ClothingItem = Boomer Skin,
+        BodyLocation = FullSuit,
+		CanHaveHoles = false,
+		RunSpeedModifier = 1.0,
+		CombatSpeedModifier = 1.0,
+        Icon = down,
+        WorldStaticModel = down,
+	}
+
+	item reclaimerSpcl
+	{
+		DisplayCategory = Clothing,
+        Type = Clothing,
+        DisplayName = Reclaimer Skin,
+        ClothingItem = Reclaimer Skin,
+        BodyLocation = FullSuit,
+		CanHaveHoles = false,
+		RunSpeedModifier = 1.0,
+		CombatSpeedModifier = 1.0,
+        Icon = down,
+        WorldStaticModel = down,
+	}
+}

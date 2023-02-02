@@ -1,0 +1,393 @@
+Type = Normal,
+There are various types of items in Project Zomobid, below you will se each of them with a short description.
+ 
+Normal – A basic item.
+ 
+Drainable – An item that has a certain amount of uses before it's destroyed
+ 
+Food – An item that can be consumed by the character
+ 
+Weapon – An item that can serve as an equpable weapon.
+ 
+Container – An item that can store other items inside it.
+ 
+Clothing – Item worn by the player character.
+ 
+Literature – A readable item like a book or a newspaper.
+ 
+Weight = 1,
+The weight of an item as seen in-game, it should be a sum of weight + size of the item.
+Typically used in Item Type: All
+ 
+DisplayName = Example item,
+Defines the name of the item as displayed in game
+Typically used in Item Type: All
+ 
+Icon = ItemIcon,
+Defines the icon the item will have in-game, the .png file of the icon should be in media/textures folder of the mod and the name must look like this Item_ItemIcon.png
+Typically used in Item Type: All
+ 
+UseDelta = 0.1,
+Defines how many uses a Drainable item has, if it's 0.1 the item will have 10 uses before it's depleted.
+Typically used in Item Type: Drainable
+ 
+Capacity = 20,
+Defines the maximum carrying capacity of the container.
+Typically used with item Type: Container
+ 
+CanBeEquipped = Back,
+Defines the clothing slot the item is equipped in, typically only used for containers in the form above.
+ 
+BodyLocation = Bottoms,
+Defines what part of the body a Clothing item is worn on. Can be Bottoms, Shoes or Top
+ 
+Temperature = 8,
+Defines the temperature resistance a Clothing item gives to the player when worn.
+ 
+CanStoreWater = TRUE/FALSE,
+Defines if the item can be used to store water. Defaults to FALSE if not used.
+Typically used in Item Type: Drainable
+ 
+IsWaterSource = TRUE/FALSE,
+Defines whether or not the item is a source of water. Defaults to FALSE if not used.
+Typically used in Item Type: Drainable
+ 
+UseWhileEquipped = TRUE/FALSE,
+Defines if the items has to be equipped in Primary or Secondary slot in order to be used. Defaults to FALSE if not used.
+ 
+ReplaceOnDeplete = Module.ItemID,
+When the item is depleted (Has no uses left or if you've eaten\drank all of it) it will be replaced by Module.ItemID
+ 
+ReplaceOnUseOn = WaterSource-WaterBottleFull,
+If the item is used on something it will turn into something else, in the case above, if used on a Water Source (Item\Water Barrel\River) it will become WaterBottleFull
+ 
+IsCookable = TRUE,
+Defnises whether or not the item can be Cooked using Fire Pits, Stoves or BBQ. If the item is cookable and stores water, it can be used to boil it to remove the tainted water effect. Defaults to FALSE if not used.
+ 
+DangerousUncooked = TRUE,
+If TRUE, eating the food item without cooking will result in it having a semi-poisonous effect.
+ 
+HungerChange = -20,
+Defines how much hunger will be removed upon consumption, if the value is Positive, consuming the item will make the character more hungry.
+ 
+ThirstChange = -20,
+Defines how much thirst will be removed upon sonsumption, if the value is Positive, consuming the item will make the character more thirsty.
+ 
+StressChange = -20,
+Defines how much stress will be removed upon sonsumption, if the value is Positive, consuming the item will make the character more stressed.
+ 
+UnhappyChange = -20,
+Defines how much happiness will be removed upon sonsumption, if the value is Positive, consuming the item will make the character more unhappy.
+ 
+BoredomChange = -20,
+Defines how much boredom will be removed upon sonsumption, if the value is Positive, consuming the item will make the character more bored.
+ 
+FatigueChange = -20,
+Defines how much fatigue will be removed upon sonsumption, if the value is Positive, consuming the item will make the character more tired.
+ 
+EnduranceChange = 20,
+Defines how much endurance will be removed upon sonsumption, if the value is NEGATIVE, consuming the item will make the character more fatigued.
+ 
+Alcoholic = TRUE,
+If TRUE consuming the item will make the character drunk. If used for Bandage items, it will act as disinfectant.
+ 
+DaysFresh = 6,
+Defines the amount of days before a food item starts to rot.
+ 
+DaysTotallyRotten = 10,
+Defines the amount of days before the food item rots completely, becoming poisonous.
+ 
+MinutesToCook = 40,
+In-Game Minutes before the item is cooked, use with Cookable = TURE,
+ 
+MinutesToBurn = 110,
+In-Game Minutes of Cooking the item before it becomes Burned.
+ 
+Poison = TRUE,
+Defnines if the item is poisonous upon consumption.
+ 
+PoisonDetectionLevel = 1,
+Unknown, probably defines the difficulty of detecting poison if used in Evolved Recipe.
+ 
+PoisonPower = 5,
+Defines the power of poison, the higher the value, the more lethal it is upon consumpion. 5 Is PoisonIvy (White Berry) 45 is Bleach level.
+ 
+UseForPoison = 1,
+Unknown, possibly amount of PoisonPower goes into Evolved Recipes.
+ 
+FoodType    =   Fruits,
+Unknown, no known use as of Build 32
+ 
+AlwaysWelcomeGift = true,
+Unknown, no known use as of Build 32
+ 
+CustomContextMenu   =   Take,
+Will replace "Eat" text in the context menu for food items.
+ 
+EvolvedRecipe = Stew:3;Pie:3;Soup:3;Sandwich:3;Salad:3;Roasted Vegetables:3,
+Item can be used in Evolved Recipes, in the above case, it could be used in Stew, Pie, Soup, Sandwitch and so on...
+ 
+DisplayCategory = Ammo,
+Will be displayed as the item's category, can be anything but custom Categories need a Translation file.
+ 
+CanBandage = true,
+If TRUE the item can be used as a Bandage for wounds.
+ 
+BandagePower    =   4,
+Defines how good a bandage is, higher values make the bandage last longer before it goes Dirty.
+ 
+ReduceInfectionPower     =   50,
+If used, it will reduce infection (NOT Zombie Infection, it reduces regular wound infection, it might slow down zombie infection though, uncofirmed)
+ 
+Tooltip = Tooltip_UseOnHealthPanel,
+Will display tooltip if item is moused over in inventory, requires Translation file that defines the text to display.
+ 
+Known Preset Tooltips:
+Tooltip_Painkillers,
+Tooltip_PillsAntidepressant,
+Tooltip_PillsBetablocker,
+Tooltip_PillsSleeping,
+Tooltip_tissue_tooltip,
+Tooltip_IronSight,
+Tooltip_Scope,
+Tooltip_AmmoStrap,
+Tooltip_Sling,
+Tooltip_FiberglassStock,
+Tooltip_RecoilPad,
+Tooltip_Laser,
+Tooltip_RedDot,
+Tooltip_ChokeTubeFull,
+Tooltip_ChokeTubeImproved,
+Tooltip_Trap,
+Tooltip_Generator,
+Tooltip_UseOnHealthPanel,
+Tooltip_Vitamins,
+ 
+RequiresEquippedBothHands = TRUE,
+If TRUE the item HAS TO be equipped in Both Hands in order to even be carried.
+ 
+TeachedRecipes =   Make Bread Dough,
+If Read the item will teach the character how to make Bread Dough, any Recipe name can be used.
+Typically used with Literature
+ 
+NumberOfPages = 260,
+Defines the number of pages a Skill Book has.
+Typically used with Literature Skill Books
+ 
+SkillTrained = Trapping,
+Defines what skill the Skill Book gives a multiplier to.
+ 
+LvlSkillTrained = 3,
+Minimum skill level required to read the skill book.
+ 
+NumLevelsTrained = 2,
+Amount of skill levels the multiplier will apply to beginning with LvlSkillTrainer.
+ 
+CanBeWrite  =   true,
+If TRUE the item can be used to write on if the character has a Pencil or Pen
+ 
+
+Weapon Type Only Below: MELEE/RANGED WEAPONS
+ 
+
+MinRange = 0.61,
+
+Defines the minimum range at which the weapon is effective, if the target is closer, he will be pushed away. Possibly 1 = 1 tile.
+
+ 
+MaxRange = 1.5,
+Defines the maximum range at which the weapon is effective. Possibly 1 = 1 tile.
+ 
+WeaponSprite = Fireaxe,
+Defines the weapon model used.
+ 
+MinAngle = 0.2,
+Unsure, defines the angle at which the weapon is effective.
+ 
+HitAngleMod = -30,
+Unsure, as above.
+ 
+SwingTime = 3.0,
+Defines the default time it will take for the swing animation to play out.
+ 
+MinimumSwingTime = 3.0,
+Defines the minimum time it will take to swing the melee weapon, affects the speed of animation and DPS.
+ 
+KnockBackOnNoDeath = TRUE,
+If TRUE the weapon will knock back the target if the strike was not lethal.
+ 
+SwingAmountBeforeImpact = 0.002,
+Defines the time from start of the swing before it makes an impact.
+ 
+Categories = Axe,
+Defines the weapon Category. Can be Blunt, Blade, Axe, Improvised, Unarmed
+ 
+SubCategory = Swinging,
+Defines the weapon Sub Category. Can be Swinging, Stab, Firearm
+ 
+ConditionMax = 15,
+Defines the maximum durability of the weapon.
+ 
+ConditionLowerChanceOneIn = 30,
+Defines the chance for weapon condition to lower when used.
+ 
+SplatNumber = 1,
+Unsure, Possible affects how many blood splats comes out after impact.
+ 
+SplatSize = 5,
+Unsure, possible affects how much blood comes out with each splat.
+ 
+SplatBloodOnNoDeath = TRUE,
+Defines whether or not blood comes out if the strike was not lethal.
+ 
+PushBackMod = 0.3,
+Modifies the strength with which the target is pushed back upon impact.
+ 
+MinDamage = 1,
+Defines the minimum damage.
+ 
+MaxDamage = 2.5,
+Defines the maximum damage.
+ 
+MaxHitCount = 2,
+Defines how many targets can be hit with a single attack.
+ 
+DoorDamage = 35,
+Defines the amount of damage done to doors. Doors have 100 HP by default.
+ 
+TreeDamage  =   35,
+Defines the amount of damage done to trees. Trees have 100HP by default.
+ 
+IdleAnim = Idle_Weapon2,
+Defines the idle animation that plays when the character is holding the weapon.
+ 
+SwingAnim = Bat,
+Defines the swinging animation that plays when the weapon is used
+ 
+RunAnim = Run_Weapon2,
+Defines the animation that plays when the character runs with the weapon.
+ 
+CriticalChance = 20,
+Chance to inflict critical, lethal damage upon the target.
+ 
+WeaponWeight = 3,
+Higher values cause exertion faster.
+ 
+KnockdownMod = 2,
+Defines the knockdown modifier, higher values mean it will be easier to knock the target down.
+ 
+TwoHandWeapon = TRUE,
+If true the weapon will be most effective if equipped in both hands.
+ 
+CloseKillMove = Jaw_Stab,
+Defines the type of close kill move, used for knives and some other stabbing weapons only.
+ 
+CantAttackWithLowestEndurance = TRUE,
+If TRUE the weapon can't be used if the character is under Extreme Exertion moodle.
+ 
+EnduranceMod = 0.5,
+Modifies the amount of endurance used up when swinging the weapon. Higher values mean exertion comes on faster.
+ 
+Weapon Type Only Below: RANGED SPECIFIC
+Ranged weapons will use a lot of variables, if not all, used by melee weapons, below you will find variables specific for Ranged Weapons, they would probably all work with a melee weapon, you can experiment.
+ 
+AmmoType = BerettaClip,
+Defines the type of Ammo being used. To the best of my knowledge, reloading requires .lua code.
+ 
+ImpactSound = null,
+Defines the sound created after impact.
+ 
+SwingSound = 9mmShot,
+Defines the attack sound.
+ 
+SoundVolume = 75,
+Defines the volume of attack sound.
+ 
+ToHitModifier = 1.5,
+Unsure, possibly a modifier for a chance to hit the target.
+ 
+NPCSoundBoost = 1.5,
+Unknown. No use as of Build 32. Speculated boost to sound if used by NPC so more zombies hear it and come.
+ 
+Ranged = TRUE,
+Defines if the weapon is a ranged weapon.
+ 
+ProjectileCount = 1,
+Defines the amount of projectiles created by shooting the weapon.
+ 
+ShareDamage = FALSE,
+Unknown effect.
+ 
+IsAimedFirearm = TRUE,
+Defines if the weapon needs to be aimed.
+ 
+UseEndurance = FALSE,
+Defines if using the weapon uses up endurance.
+ 
+MultipleHitConditionAffected = FALSE,
+Unknown.
+ 
+SoundRadius = 150,
+Defines the sound radius, higher values cause more zombies to hear it from more far away.
+ 
+AimingPerkCritModifier = 10,
+Defines Aiming Skill Bonus to Critical Chance
+ 
+AimingPerkRangeModifier = 1.5,
+Defines Aiming Skill Bonus to Range.
+ 
+HitChance = 45,
+Default chance to hit the target.
+ 
+AimingPerkHitChanceModifier = 15,
+Defines Aiming Skill Bonus to Hit Chance.
+ 
+AimingPerkMinAngleModifier = 0.05,
+Defines Aiming Skill Bonus to Min Angle.
+ 
+RecoilDelay = 20,
+Unsure. Defines time that must pass between shots.
+ 
+SoundGain = 1.5,
+Unknown effect.
+ 
+ClipSize = 15,
+Maximum amount of ammo that can go into the weapon. Again, .lua code is required for the weapon to be re loadable.
+ 
+ReloadTime = 10,
+Defines the time needed for the weapon to be reloaded.
+ 
+AimingTime = 40,
+Defines Aiming Difficulty, lower values increase chance to hit with low aiming time.
+ 
+PiercingBullets = TRUE,
+If true, multiple objects can be hit by a single projectile if they are in the right angle.
+ 
+Weapon Type Only Below: THROWN SPECIFIC
+ 
+UseSelf = TRUE,
+If TRUE the item itself will be used up when attacking.
+ 
+PhysicsObject = Aerosolbomb,
+Defines the thrown item sprite.
+ 
+ExplosionPower  =   70,
+Defines the power of the explosion created upon impact.
+ 
+ExplosionRange  =   6,
+Defines the AoE of the explosion.
+ 
+FirePower  =   97,
+Defines the amount of fire that will be created upon impact.
+ 
+FireRange  =   6,
+Defines the AoE of fire.
+ 
+triggerExplosionTimer   =   50,
+Defines the time before exlosion if placed.
+ 
+ExplosionSound  =   smallExplosion,
+Defines the sound of explosion.
+ 
+PlacedSprite = constructedobjects_01_32,
+Defines sprite used if the weapon is placed as a trap.
