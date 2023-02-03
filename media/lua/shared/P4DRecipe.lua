@@ -1,5 +1,3 @@
-P4DRecipe = 
-{
 	local lewt = 
 	{ 
 		"Base.Axe",
@@ -26,18 +24,8 @@ P4DRecipe =
 		"Base.Spanner"
 	}
 
-	local hiLewt =
-	{
-
-	}
-
-	function GetLootFromSkin(_, _, player)
+	function GetLootFromSkin()
 		rndItmNum = ZombRand(#lewt)+1
-		player:getInventory():AddItems(lewt[rndItmNum])
+		print(rndItmNum)
+		getPlayer():getInventory():AddItems(lewt[rndItmNum], 1)
 	end
-
-	function GetHighLootFromSkin(_, _, player)
-		rndItmNum = ZombRand(#hiLewt)+1
-		player:getInventory():AddItems(hiLewt[rndItmNum])
-	end
-}

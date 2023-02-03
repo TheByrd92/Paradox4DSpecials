@@ -36,17 +36,56 @@ local function ForceUpdateZombieStats()
 	zombie:DoZombieStats()
 end
 
---Meant to change normal Zs into the
+--Meant to change behavior of specials.
 --mutated Zs based off of the settings (probably) found above.
-function CreateZsFromOtherZs()
+function SpecialZombieAbilities()
 	--Get that sweet zombibo data I think
 	local allZs = zombie:getModData()
-
-	allZs.
 
 	ForceUpdateZombieStats()
 end
 
+function findField(obj, fname)
+  for i = 0, getNumClassFields(obj) - 1 do
+    local fn = getClassField(obj, i)
+    if tostring(fn) == fname then
+      return fn
+    end
+  end
+end
+
+local SPEED_SPRINTER        = 1
+local SPEED_FAST_SHAMBLER   = 2
+local SPEED_SHAMBLER        = 3
+
+--I would rather not update stats for no reason on already spawned zombies.
+--So I'm trying to spawn them at intervals I wonder though if this will
+--Create zombies like I want it to.
+function CreateASpecial()
+	local p = getPlayer();
+	
+	
+	spclZ = createZombie(p:getX(), p:getY(), p:getZ(), nil, 0, IsoDirections.E)
+	
+	local extraStuff = spclZ:getModData()
+	extraStuff.customType = "Charger"
+	print(extraStuff.customType)
+	
+	getSandboxOptions():set("ZombieLore.Speed", SPEED_SHAMBLER)
+	spclZ:makeInactive(true)
+	spclZ:makeInactive(false)
+	getSandboxOptions():set("ZombieLore.Speed", SPEED_SPRINTER)
+	
+	print(spclZ:getX() , " : " , spclZ:getY())
+	
+	local speedType = findField(spclZ, "public int zombie.characters.IsoZombie.speedType")
+	local speedTypeVal = getClassFieldVal(spclZ, speedType)
+	
+	print(speedTypeVal)
+	
+	spclZ:dressInPersistentOutfit()
+end
 
 
-Events.OnZombieUpdate.Add(CreateZsFromOtherZs)
+Events.EveryTenMinutes.Add(CreateASpecial)
+--Events.OnZombieUpdate.Add(SpecialZombieAbilities)

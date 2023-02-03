@@ -10,8 +10,8 @@ module P4DSpcls
 		chargerSpcl,
 		CanBeDoneFromFloor:true,
 		Result:Base.Butter=1,
-		OnCreate:P4DRecipe.GetLootFromSkin,
-		Time:100.0,
+		OnCreate:GetLootFromSkin,
+		Time:200.0,
 		Sound:OpenBox,
 	}
 
@@ -20,8 +20,8 @@ module P4DSpcls
 		boomerSpcl,
 		CanBeDoneFromFloor:true,
 		Result:Base.Butter=1,
-		OnCreate:P4DRecipe.GetLootFromSkin,
-		Time:100.0,
+		OnCreate:GetLootFromSkin,
+		Time:200.0,
 		Sound:OpenBox,
 	}
 
@@ -30,8 +30,8 @@ module P4DSpcls
 		reclaimerSpcl,
 		CanBeDoneFromFloor:true,
 		Result:Base.Butter=1,
-		OnCreate:P4DRecipe.GetLootFromSkin,
-		Time:100.0,
+		OnCreate:GetLootFromSkin,
+		Time:200.0,
 		Sound:OpenBox,
 	}
 }
