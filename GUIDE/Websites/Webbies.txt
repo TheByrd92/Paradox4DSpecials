@@ -1,0 +1,2 @@
+https://github.com/FWolfe/Zomboid-Modding-Guide/tree/master/clothing
+https://github.com/quarantin/beautiful-java

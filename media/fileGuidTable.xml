@@ -2,69 +2,18 @@
 <fileGuidTable>
 
 	<files>
-		<path>media/clothing/clothingItems/cus01.xml</path>
-		<guid>db691c41-0fdc-44bd-b4d3-e1a0282cdcf5</guid>
+		<path>media/clothing/clothingItems/chargerSpcl.xml</path>
+		<guid>CHARGERSKIN-2bb0-4f75-a4bb-ab8a62975b36</guid>
 	</files>
 
 	<files>
-		<path>media/clothing/clothingItems/cus2.xml</path>
-		<guid>1512f81f-5681-4659-bae9-24fa26962aa7</guid>
-	</files>
-	
-	<files>
-		<path>media/clothing/clothingItems/cus3.xml</path>
-		<guid>7a923db0-c88a-4318-8944-1b7277bd5f79</guid>
+		<path>media/clothing/clothingItems/reclaimerSpcl.xml</path>
+		<guid>RECLAIMERSKIN-197e-40aa-8dd0-ad7b4c4c05a5</guid>
 	</files>
 
 	<files>
-		<path>media/clothing/clothingItems/cus4.xml</path>
-		<guid>4d6c566e-33ff-4e75-830c-33f1ad372ae5</guid>
+		<path>media/clothing/clothingItems/boomerSpcl.xml</path>
+		<guid>BOOMERSKIN-ea11-4803-9092-b8005083f71b</guid>
 	</files>
-	
-	<files>
-		<path>media/clothing/clothingItems/cus5.xml</path>
-		<guid>ccd640b4-2e10-4aeb-a7a1-9bf26e7fee0b</guid>
-	</files>
-	
-	<files>
-		<path>media/clothing/clothingItems/nomal1.xml</path>
-		<guid>b8532a88-fc3c-4a77-966d-97e9760fe420</guid>
-	</files>
-	
-	<files>
-		<path>media/clothing/clothingItems/cus7.xml</path>
-		<guid>a2f715da-3bf1-4e40-9f3a-d3cfb88dfbe3</guid>
-	
-	</files>
-		<files>
-		<path>media/clothing/clothingItems/cus8.xml</path>
-		<guid>e3879832-b24f-4db7-9ac8-f67836b0b73b</guid>
-	
-	</files>
-		<files>
-		<path>media/clothing/clothingItems/nomal2.xml</path>
-		<guid>9658695c-22ee-455d-94f7-f649e68cd1fa</guid>
-	
-	</files>
-		<files>
-		<path>media/clothing/clothingItems/nomal3.xml</path>
-		<guid>813443c4-2001-4448-ad3a-becd24270fa1</guid>
-	</files>
-	
-	<files>
-		<path>media/clothing/clothingItems/nomal4.xml</path>
-		<guid>7110f6d9-cff7-40b0-9c3f-9369d874d4d2</guid>
-	</files>
-	
-	<files>
-		<path>media/clothing/clothingItems/nomal5.xml</path>
-		<guid>d8e4b5f0-ed61-4012-a22e-1c40bfbd86f8</guid>
-	</files>
-	
-	<files>
-		<path>media/clothing/clothingItems/nomal6.xml</path>
-		<guid>1aa68dd5-10e5-48ae-9d4b-9b11746e5540</guid>
-	</files>
-
 
 </fileGuidTable>

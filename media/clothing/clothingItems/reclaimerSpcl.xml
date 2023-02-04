@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <clothingItem>
-	<m_MaleModel>media\models_X\cus4.FBX</m_MaleModel>
-	<m_FemaleModel>media\models_X\cus4.FBX</m_FemaleModel>
-	<m_GUID>e4db392d-5564-4c4f-96c8-82099bff4250</m_GUID>
+	<m_MaleModel>media\models_X\reclaimerSpcl.FBX</m_MaleModel>
+	<m_FemaleModel>media\models_X\reclaimerSpcl.FBX</m_FemaleModel>
+	<m_GUID>6ad67aa2-e5c9-4e91-bd71-62683db3ea6a</m_GUID>
 	<m_Static>false</m_Static>
 	<m_AllowRandomHue>false</m_AllowRandomHue>
 	<m_AllowRandomTint>false</m_AllowRandomTint>
@@ -20,5 +20,5 @@
 	<m_Masks>9</m_Masks>	
 	<m_Masks>10</m_Masks>	
 	<m_Masks>11</m_Masks>	
-	<textureChoices>Clothes\cus4</textureChoices>
+	<textureChoices>Clothes\reclaimerSpcl</textureChoices>
 </clothingItem>

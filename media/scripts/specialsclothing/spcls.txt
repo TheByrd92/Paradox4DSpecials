@@ -1,44 +1,66 @@
-module P4DSpcls
+module Base
 {
+	
 	item chargerSpcl
 	{
-		DisplayCategory = Clothing,
-        Type = Clothing,
-        DisplayName = Charger Skin,
-        ClothingItem = Charger Skin,
-        BodyLocation = FullSuit,
-		CanHaveHoles = false,
-		RunSpeedModifier = 1.0,
-		CombatSpeedModifier = 1.0,
-        Icon = down,
-        WorldStaticModel = down,
-	}
-
-	item boomerSpcl
-	{
-		DisplayCategory = Clothing,
-        Type = Clothing,
-        DisplayName = Boomer Skin,
-        ClothingItem = Boomer Skin,
-        BodyLocation = FullSuit,
-		CanHaveHoles = false,
-		RunSpeedModifier = 1.0,
-		CombatSpeedModifier = 1.0,
-        Icon = down,
-        WorldStaticModel = down,
+		Type = Clothing,
+		DisplayName = Charger Skin,
+		ClothingItem = chargerSpcl,
+		Icon = down,
+		WorldStaticModel = down,
+		BodyLocation = Shoes,
+		RunSpeedModifier = 1,
+		CombatSpeedModifier = 1,
+		BiteDefense = 0,
+		ScratchDefense = 0,
+		NeckProtectionModifier = 0,
+		Insulation = 0,
+		WindResistance = 0,
+		WaterResistance = 0,
+		Weight = 2,
 	}
 
 	item reclaimerSpcl
 	{
-		DisplayCategory = Clothing,
-        Type = Clothing,
-        DisplayName = Reclaimer Skin,
-        ClothingItem = Reclaimer Skin,
-        BodyLocation = FullSuit,
-		CanHaveHoles = false,
-		RunSpeedModifier = 1.0,
-		CombatSpeedModifier = 1.0,
-        Icon = down,
-        WorldStaticModel = down,
+		Type = Clothing,
+		DisplayName = Reclaimer Skin,
+		ClothingItem = reclaimerSpcl,
+		Icon = down,
+		WorldStaticModel = down,
+		BodyLocation = Shoes,
+		RunSpeedModifier = 1,
+		CombatSpeedModifier = 1,
+		BiteDefense = 0,
+		ScratchDefense = 0,
+		NeckProtectionModifier = 0,
+		Insulation = 0,
+		WindResistance = 0,
+		WaterResistance = 0,
+		Weight = 2,
 	}
+
+	item boomerSpcl
+	{
+		Type = Clothing,
+		DisplayName = Boomer Skin,
+		ClothingItem = boomerSpcl,
+		Icon = down,
+		WorldStaticModel = down,
+		BodyLocation = Shoes,
+		RunSpeedModifier = 1,
+		CombatSpeedModifier = 1,
+		BiteDefense = 0,
+		ScratchDefense = 0,
+		NeckProtectionModifier = 0,
+		Insulation = 0,
+		WindResistance = 0,
+		WaterResistance = 0,
+		Weight = 2,
+	}
+
+	model down
+    {
+        mesh = WorldItems/Clothing/down,
+        scale = 1
+    }
 }
