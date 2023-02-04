@@ -141,20 +141,6 @@ function GetNewCoordForNearPlayer(pX, pY, zN)
 	return toReturn;
 end
 
-local SPEED_SPRINTER = 1
-local SPEED_FAST_SHAMBLER = 2
-local SPEED_SHAMBLER = 3
---This seems really janky or slow. I'll have to look into what
---makeInactive(false) actually does.
-local function ForceUpdateZombieStats()
-	--I'll need to iterate through every available zombibo and 
-	--set them back to their og settings as well which really sucks.
-	--It's only once per day though.
-	spclZ:makeInactive(true)
-	spclZ:makeInactive(false)
-	getSandboxOptions():set("ZombieLore.Speed", SPEED_SHAMBLER)
-end
-
 --I would rather not update stats for no reason on already spawned zombies.
 --So I'm trying to spawn them at intervals I wonder though if this will
 --Create zombies like I want it to.
@@ -166,28 +152,21 @@ function CreateASpecial()
 	
 	spclZ = createZombie(rX, rY, 0 , nil, 0, IsoDirections.E);
 	
-	local extraStuff = spclZ:getModData();
-	extraStuff.abilityTicker = 0;
+	local zStuff = spclZ:getModData();
 
 	local specialRandNum = ZombRand(SPECIAL_TOTAL)+1;
-	if specialRandNum == P4DGlobals.CHARGER_NUM then
-		extraStuff.customType = P4DGlobals.CHARGER_NUM
-		spclZ:dressInPersistentOutfit("ChargerOutfit")
-		getSandboxOptions():set("ZombieLore.Speed", SPEED_SPRINTER);
-		ForceUpdateZombieStats();
-	elseif specialRandNum == P4DGlobals.BOOMER_NUM then
-		extraStuff.customType = P4DGlobals.BOOMER_NUM
-		spclZ:dressInPersistentOutfit("BoomerOutfit")
-		getSandboxOptions():set("ZombieLore.Speed", SPEED_FAST_SHAMBLER);
-		ForceUpdateZombieStats();
-	elseif specialRandNum == P4DGlobals.RECLAIMER_NUM then
-		extraStuff.customType = P4DGlobals.RECLAIMER_NUM
-		spclZ:dressInPersistentOutfit("ReclaimerOutfit")
-		getSandboxOptions():set("ZombieLore.Speed", SPEED_FAST_SHAMBLER);
-		ForceUpdateZombieStats();
+	if specialRandNum == CHARGER_NUM then
+		spclZ:dressInPersistentOutfit(CHARGER_OUTFIT_NAME);
+		zStuff.abilityTicker = 0;
+	elseif specialRandNum == BOOMER_NUM then
+		spclZ:dressInPersistentOutfit(BOOMER_OUTFIT_NAME);
+		zStuff.abilityTicker = 0;
+	elseif specialRandNum == RECLAIMER_NUM then
+		spclZ:dressInPersistentOutfit(RECLAIMER_OUTFIT_NAME);
+		zStuff.abilityTicker = 0;
 	end
 	
-	print(REAL_SPECIAL_NAME[extraStuff.customType], " Spawned at: ", spclZ:getX(), ",", spclZ:getY())
+	print(tostring(spclZ:getOutfitName()), " Spawned at: ", spclZ:getX(), ",", spclZ:getY())
 	
 	--local speedType = findField(spclZ, "public int zombie.characters.IsoZombie.speedType")
 	--local speedTypeVal = getClassFieldVal(spclZ, speedType)
